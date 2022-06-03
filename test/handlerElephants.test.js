@@ -14,4 +14,13 @@ describe('Testes da função HandlerElephants', () => {
   it('caso o parametro seja location retorna a localozação dos elefantes', () => {
     expect(handlerElephants('location')).toBe('NW');
   });
+  it('caso o parametro não contemple nenhuma função deve retornar null', () => {
+    expect(handlerElephants('aleatorio')).toBeNull();
+  });
+  it('caso não receba parametro deve retornar undefined', () => {
+    expect(handlerElephants()).toBeUndefined();
+  });
+  it('verifica se quando o parametro for popularity retorna a popularidade dos elefantes', () => {
+    expect(handlerElephants('popularity')).toBe(5);
+  });
 });
